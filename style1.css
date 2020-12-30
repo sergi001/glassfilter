@@ -1,0 +1,105 @@
+*{
+    width: 200px;
+    height:25px ;
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #63869c;
+}
+/*styling the header*/
+.title { 
+    margin-bottom: 10px; 
+    font-size: 20px; 
+    font-weight:bold; 
+    text-align:center; 
+    width: auto; 
+    color:green; 
+    border: outset black 2px; 
+} 
+/*overal styling but also used in the change of themes*/
+.container{
+    width: 100%;
+    height: 100%;
+    background-color:#2E2E2E;
+    color: white;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    text-align: center;
+    margin-top: 80px;
+    margin-left: 40px;
+}
+.containerLight{
+    background-color:#CEECF5;
+    color: black;
+}
+/*shaping the tables in each page*/
+table{
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+}
+/*styling the area which will display the output*/
+  .display {
+    width: 100%;
+    height: 80px;
+    border: none;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 2rem;
+    background-color: #63869c;
+    color: rgb(0, 0, 0);
+    text-align:left;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+  }
+  /*to prevent overlapping with the form*/
+  .screen{
+      display: flex;
+  }
+  
+  .align{
+      display: flex;
+      
+  }
+  /*This was for the hearing impaired like a feature giving them a voice*/
+  .speech{
+      margin-top: 150px;
+      margin-left: 40px;
+      position: absolute;
+  }
+  /*styling the buttons*/
+   .btn{
+      width:300px;
+      height: 50px;
+      float: left;
+      padding: 10px 20px;
+      background: none;
+      font-size: 15px;
+      font-family: "montserrat";
+      margin: 10px;
+      border: 3px  solid #0431B4;
+      color: #3498db;
+      transition: 0.5s;
+
+  }
+  /*enables the button to hover*/
+  .btn:hover{
+      color: aliceblue;
+      background-color:#3498db ;
+
+  }
+  /*giving the links tag a different color */
+  a{
+      color:#3498db;
+  }
+  .footer {
+    position: fixed;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    color:#3498db
+    text-align: center;
+}

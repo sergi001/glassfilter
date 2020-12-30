@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body class="container">
+    <div class="calculator">
+        <div class ="title"> 
+            Basic Calculator 
+           </div> 
+           <button id="theme" class="btn">Themes</button>
+           <button type="button" class="btn"><a href="index2.html">Scientific Calculator</a></button>
+                <form name="form"> 
+                    <table>
+                    <!--Display  the values on the screen'Textfield'-->
+                    <tr> 
+                        <td colspan=6><input name="display" class="display" onkeypress="return event.charCode >= 48 && event.charCode <= 57" type="text"> </td> 
+                    </tr> 
+                    <tr>
+                        <td><input class="btn" type="button" onclick="insert(7)" value="7" name=""></td>
+                        <td><input class="btn" type="button" onclick="insert(8)" value="8" name=""></td>
+                        <td><input class="btn" type="button" onclick="insert(9)" value="9" name=""></td>
+                        <td><input class="btn" type="button" onclick="insert('+')" value="+" name=""></td>
+                    </tr>
+                    <tr>
+                        <td><input class="btn" type="button" onclick="insert(4)" value="4" name=""></td>
+                        <td><input class="btn" type="button" onclick="insert(5)" value="5" name=""></td>
+                        <td><input class="btn" type="button" onclick="insert(6)" value="6" name=""></td>
+                        <td><input class="btn" type="button" onclick="insert('-')" value="-" name=""></td>
+                    </tr>
+                    <tr>
+                        <td><input class="btn" type="button" onclick="insert(1)" value="1" name=""></td>
+                        <td><input class="btn" type="button" onclick="insert(2)" value="2" name=""></td>
+                        <td><input class="btn" type="button" onclick="insert(3)" value="3" name=""></td>
+                        <td><input class="btn" type="button" onclick="insert('*')" value="x" name=""></td>
+                    </tr>
+                    <tr>
+                        <td><input class="btn" type="button" onclick="insert('.')" value="." name=""></td>
+                        <td><input class="btn" type="button" onclick="insert(0)" value="0" name=""></td>
+                        <td><input class="btn" type="button" onclick="back()" value="DEL" name=""></td>
+                        <td><input class="btn" type="button" onclick="insert('/')" value="/" name=""></td>
+                    </tr>
+                    <tr >
+                        <td><input class="btn" type="button" onclick="clean()" value="C" name=""></td>
+                        <td colspan=2><input class="btn" style="width: 148%;" type="button" onclick="equal()" value="=" name=""></td>
+                    </tr>
+                    </table>
+                    </form>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script >
+        //Insertion of operations and operands
+		function insert(num){
+			form.display.value =form.display.value+num;
+		}
+        //To evaluate the inserted values
+		function equal(){
+			exp=form.display.value; 
+			form.display.value=eval(exp);
+		}
+        //Clear the display
+		function clean(){
+			form.display.value="";
+		}
+        //Removes the most recent added value in the display
+		function back(){
+			exp = form.display.value;
+			form.display.value=exp.substring(0,exp.length-1);
+        }
+    </script>
+    <div class="footer">
+        <footer>&copy; Copyright 2020 sergi.calc</footer>
+      </div>
+</body>
+</html>
